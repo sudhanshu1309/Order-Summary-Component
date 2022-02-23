@@ -1,0 +1,78 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0px;
+  padding: 0px;
+  background-color: $paleBlue;
+  background-image: url("../images/pattern-background-mobile.svg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  font-family: $font;
+  line-height: 1.5;
+
+  * {
+    margin: 0;
+    padding: 0;
+  }
+
+  @include breakpoint(large) {
+    background-image: url("../images/pattern-background-desktop.svg");
+  }
+}
+
+section {
+  border-radius: 20px;
+  background-color: #ffffff;
+  margin: 71px 24px;
+  border: 1px solid red;
+
+  @include breakpoint(large) {
+    margin: 102px 495px;
+  }
+
+  .image {
+    padding-bottom: 38px;
+
+    @include breakpoint(large) {
+      padding-bottom: 54px;
+    }
+    img {
+      width: 100%;
+      border-start-start-radius: 20px;
+      border-start-end-radius: 20px;
+    }
+  }
+
+  h2 {
+    text-align: center;
+    font-weight: 900;
+    font-size: 21px;
+    border: 1px solid red;
+
+    @include breakpoint(large) {
+      font-size: 26px;
+    }
+  }
+
+  p {
+    text-align: center;
+    padding: 0px 38px;
+    font-size: 12px;
+    margin-top: 25px;
+    margin-bottom: 45px;
+    border: 1px solid black;
+
+    @include breakpoint(large) {
+      font-size: 1rem;
+      margin-bottom: 48px;
+    }
+  }
+}

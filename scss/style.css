@@ -1,0 +1,92 @@
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  margin: 0px;
+  padding: 0px;
+  background-color: #e0e8ff;
+  background-image: url("../images/pattern-background-mobile.svg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  font-family: "Red Hat Display", sans-serif;
+  line-height: 1.5;
+}
+
+body * {
+  margin: 0;
+  padding: 0;
+}
+
+@media screen and (min-width: 999px) {
+  body {
+    background-image: url("../images/pattern-background-desktop.svg");
+  }
+}
+
+section {
+  border-radius: 20px;
+  background-color: #ffffff;
+  margin: 71px 24px;
+  border: 1px solid red;
+}
+
+@media screen and (min-width: 999px) {
+  section {
+    margin: 102px 495px;
+  }
+}
+
+section .image {
+  padding-bottom: 38px;
+}
+
+@media screen and (min-width: 999px) {
+  section .image {
+    padding-bottom: 54px;
+  }
+}
+
+section .image img {
+  width: 100%;
+  border-start-start-radius: 20px;
+  border-start-end-radius: 20px;
+}
+
+section h2 {
+  text-align: center;
+  font-weight: 900;
+  font-size: 21px;
+  border: 1px solid red;
+}
+
+@media screen and (min-width: 999px) {
+  section h2 {
+    font-size: 26px;
+  }
+}
+
+section p {
+  text-align: center;
+  padding: 0px 38px;
+  font-size: 12px;
+  margin-top: 25px;
+  margin-bottom: 45px;
+  border: 1px solid black;
+}
+
+@media screen and (min-width: 999px) {
+  section p {
+    font-size: 1rem;
+    margin-bottom: 48px;
+  }
+}
+/*# sourceMappingURL=style.css.map */
