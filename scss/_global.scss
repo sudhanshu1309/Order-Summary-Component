@@ -23,7 +23,7 @@ body {
     padding: 0;
   }
 
-  @include breakpoint(large) {
+  @include breakpoint(medium) {
     background-image: url("../images/pattern-background-desktop.svg");
   }
 }
@@ -31,17 +31,22 @@ body {
 section {
   border-radius: 20px;
   background-color: #ffffff;
-  margin: 71px 24px;
-  border: 1px solid red;
+  margin: auto;
+  margin-top: 71px;
+  margin-bottom: 71px;
+  max-width: 327px;
 
-  @include breakpoint(large) {
-    margin: 102px 495px;
+  @include breakpoint(medium) {
+    width: 450px;
+    margin: auto;
+    margin-top: 102px;
+    margin-bottom: 102px;
   }
 
   .image {
     padding-bottom: 38px;
 
-    @include breakpoint(large) {
+    @include breakpoint(medium) {
       padding-bottom: 54px;
     }
     img {
@@ -55,9 +60,8 @@ section {
     text-align: center;
     font-weight: 900;
     font-size: 21px;
-    border: 1px solid red;
 
-    @include breakpoint(large) {
+    @include breakpoint(medium) {
       font-size: 26px;
     }
   }
@@ -67,12 +71,86 @@ section {
     padding: 0px 38px;
     font-size: 12px;
     margin-top: 25px;
-    margin-bottom: 45px;
-    border: 1px solid black;
+    margin-bottom: 28px;
 
-    @include breakpoint(large) {
+    @include breakpoint(medium) {
       font-size: 1rem;
-      margin-bottom: 48px;
+      margin-bottom: 26px;
+    }
+  }
+
+  .plan {
+    background-color: $veryPaleBlue;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 17px 24px;
+    border-radius: 10px;
+    font-size: 12px;
+
+    @include breakpoint(medium) {
+      margin: 23px 30px;
+    }
+
+    .cost {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+
+      p {
+        color: $desaturatedBlue;
+        margin: 0;
+        padding: 0;
+        text-align: left;
+      }
+    }
+  }
+
+  a {
+    &:hover {
+      cursor: pointer;
+      text-decoration-line: none;
+    }
+  }
+  .btn {
+    margin-left: 24px;
+    margin-right: 24px;
+    text-align: center;
+    margin-bottom: 36px;
+
+    @include breakpoint(medium) {
+      margin-left: 48px;
+      margin-right: 48px;
+      margin-bottom: 28px;
+    }
+
+    input {
+      width: 100%;
+      height: 50px;
+      border-radius: 12px;
+      background-color: $brightBlue;
+      color: #ffffff;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+
+  h4 {
+    font-size: 11px;
+    text-align: center;
+    font-weight: 300;
+    padding-bottom: 48px;
+    color: $desaturatedBlue;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    @include breakpoint(medium) {
+      padding-bottom: 54px;
     }
   }
 }
